@@ -33,19 +33,19 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #1294A9;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
 $background: #fff;
-$background-alt: #f2f2f5;
+$background-alt: #EAEEE0;
 
 // Define border colors
 $border: #dcd9d9;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #0CB498;
+$text: #788A94;
 
 /*
     ---------------------
@@ -84,7 +84,7 @@ $text: #74808a;
 */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 
     &.active {
@@ -292,12 +292,19 @@ footer {
 }
 
 .btn-rounded-white {
+    position: relative;
+    bottom: -50px;
     display: inline-block;
     color: #fff;
     padding: 15px 25px;
     border: 3px solid #fff;
     border-radius: 30px;
     @include transition();
+
+    &:visited, &:focus {
+        color: #fff;
+        text-decoration: none;
+    }
 
     &:hover {
         color: $base-color;
@@ -346,7 +353,7 @@ footer {
 
 #lead {
     position: relative;
-    height: 100vh;
+    height: 50vh;
     min-height: 500px;
     max-height: 1080px;
     background: url(../images/lead-bg.jpg);
@@ -705,6 +712,11 @@ footer {
         list-style: none;
         cursor: default;
         font-size: 1.2em;
+
+        &:hover {
+            background: $heading;
+            color: invert($heading);
+        }
     }
 }
 
